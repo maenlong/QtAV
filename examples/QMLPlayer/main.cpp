@@ -18,6 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ******************************************************************************/
 #include <cmath>
+#include <QtCore>
 #include <QtCore/QtDebug>
 #include <QtCore/QDir>
 #include <QtCore/QFile>
@@ -83,7 +84,7 @@ qDebug() <<  "event dispatcher:" << QCoreApplication::eventDispatcher();
 #else
             1.0;
 #endif
-    if (std::isinf(r) || std::isnan(r))
+    if (qIsInf(r) || qIsNaN(r))
         r = kR;
     float sr = options.value(QStringLiteral("scale")).toFloat();
 #if defined(Q_OS_ANDROID) || defined(Q_OS_WINRT)

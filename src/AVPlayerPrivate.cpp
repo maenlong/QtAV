@@ -28,6 +28,8 @@
 #include "QtAV/MediaIO.h"
 #include "QtAV/VideoCapture.h"
 #include "QtAV/private/AVCompat.h"
+#include <QtCore>
+
 #if AV_MODULE_CHECK(LIBAVFORMAT, 55, 18, 0, 39, 100)
 extern "C" {
 #include <libavutil/display.h>
